@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <link href="orders.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script defer src="orders.js"></script>
+</head>
+
+<body>
+    <div class="form">
+        <div class="waiterArea">
+            {{#if isWaiter}}
+            <div data-userId="{{this.id}}" id="waiterDropdownSelect" data-isWaiter="{{this.isWaiter}}"
+                class="waiterDropdownSelect">
+                {{this.id}} {{this.loginName}}
+                <i class="bi bi-list"></i>
+            </div>
+            <div id="waitersList" class="list">
+                {{#each userName}}
+                <li data-id="{{this.id}}">{{this.id}} {{this.name}}</li>
+                {{/each}}
+            </div>
+            {{else}}
+            <div id="waiterDropdownSelect" data-role="{{this.role}}" data-name="{{this.loginName}}"
+                class="waiterDropdownSelect">
+                Choose waiter ID
+                <i class="bi bi-list"></i>
+            </div>
+            {{/if}}
+        </div>
+        <div class="menuArea">
+            <div id="menuDropdownSelect" class="menuDropdownSelect">
+                Choose menu Item
+                <i class="bi bi-list"></i>
+            </div>
+            <div id="itemsList" class="list">
+                {{#each menuItem}}
+                <label data-id="{{this.id}}">{{this.id}}
+                    {{this.title}}</label>
+                {{/each}}
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="cancelButton">Cancel</button>
+            <button id="submitButton">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>

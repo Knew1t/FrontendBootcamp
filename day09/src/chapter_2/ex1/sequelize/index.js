@@ -1,0 +1,30 @@
+const { Sequelize } = require("sequelize");
+
+// In a real app, you should keep the database connection URL as an environment variable.
+// But for this example, we will just use a local postgresql database.
+// const sequelize = new Sequelize(process.env.DB_CONNECTION_URL);
+
+const sequelize = new Sequelize("postgres://longshot:1@127.0.0.1:5432/day09"); // Example for postgres
+
+const modelDefiners = [
+  require("./models/user_model"),
+  require("./models/vacancy_model"),
+  require("./models/UsersVacancy_model"),
+];
+
+// We define all models according to their files.
+for (const modelDefiner of modelDefiners) {
+  modelDefiner(sequelize);
+}
+
+// We execute any extra setup after the models are defined, such as adding associations.
+function applyExtraSetup(sequelize) {
+  const { users, vacancy } = sequelize.models;
+  users.belongsToMany(vacancy, { through: "UsersVacancy" });
+  vacancy.belongsToMany(users, { through: "UsersVacancy" });
+}
+
+applyExtraSetup(sequelize);
+
+// We export the sequelize connection instance to be used around our app.
+module.exports = sequelize;

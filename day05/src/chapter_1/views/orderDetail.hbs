@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../ordersId.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper" id="">
+      {{#each output}}
+        <div
+          class="menuItem"
+          style="background-image: url('{{this.picture}}'); background-size: 100%; background-position: center;"
+        >
+          <p>
+            {{this.id}}
+            {{this.title}}
+          </p>
+          <p>
+            price:{{this.cost}}
+          </p>
+          <p>
+            calories:{{this.callQuantity}}
+          </p>
+          {{this.description}}
+        </div>
+      {{/each}}
+      <div class="total">
+        Total amount:
+        {{total}}
+      </div>
+      <button type="" id="closeOrderButton" data-id="{{id}}">Close order</button>
+    </div>
+    <script src="../ordersId.js">
+    </script>
+  </body>
+</html>

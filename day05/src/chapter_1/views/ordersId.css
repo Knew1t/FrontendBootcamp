@@ -1,0 +1,30 @@
+* {
+  font-family: arial;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menuItem {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  border: 3px solid rgb(237, 120, 80);
+  margin: 5%;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.total {
+  text-align: right;
+  grid-column: 3;
+}
+button {
+  grid-column: 3;
+}

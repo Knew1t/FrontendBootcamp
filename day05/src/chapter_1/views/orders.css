@@ -1,0 +1,109 @@
+* {
+  font-family: arial;
+}
+
+.form {
+  min-height: 300px;
+  font-size: 16px;
+  border: 3px solid orange;
+  padding: 16px;
+  margin: 10% 10%;
+}
+
+.waiterDropdownSelect,
+.menuDropdownSelect {
+  user-select: none;
+  position: relative;
+  color: grey;
+  border: 3px solid orange;
+  padding: 16px;
+}
+
+.waiterArea,
+.menuArea {
+  margin: 16px 16px 0px 16px;
+  min-height: 200px;
+}
+
+/* .menuDropdownSelect { */
+/*   margin-top: 20%; */
+/*   margin-bottom: 20%; */
+/* } */
+
+label {
+  display: block;
+  user-select: none;
+}
+
+li {
+  list-style-type: none;
+  font-family: courier;
+  user-select: none;
+}
+
+.waiterDropdownSelect:hover,
+.menuDropdownSelect:hover,
+li:hover {
+  background-color: rgb(241 243 244);
+}
+
+.waiterDropdownSelect:hover,
+.menuDropdownSelect:hover {
+  cursor: pointer;
+}
+
+.list {
+  position: relative;
+  display: none;
+  border: 3px solid orange;
+  border-top: none;
+}
+
+#itemsList {
+  /* margin-top: -20%; */
+  /* margin-bottom: 5%; */
+}
+
+.show {
+  display: block;
+}
+
+.checked {
+  background-color: rgb(241 243 244);
+}
+
+.buttons > * {
+  border: 2px solid turquoise;
+  background-color: white;
+  margin: 10px;
+}
+
+.buttons {
+  text-align: right;
+}
+
+#cancelButton:active,
+#submitButton:active {
+  background-color: grey;
+}
+
+#cancelButton {
+  border-color: red;
+}
+
+.waiterDropdownSelect,
+.menuDropdownSelect {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pressToRemove {
+  display: inline;
+  border: 1px solid lightblue;
+  border-radius: 4px;
+  margin: 0px 4px;
+}
+
+.count {
+  color: black;
+}

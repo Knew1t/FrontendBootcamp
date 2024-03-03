@@ -1,0 +1,51 @@
+body {
+  font-family: roboto;
+}
+
+.login-text {
+  font-family: roboto;
+  font-size: 12px;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid lightgrey;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: roboto;
+  font-size: 12px;
+}
+
+input {
+  margin-bottom: 5%;
+  display: block;
+  border: 4px solid lightgrey;
+
+}
+
+.radio {
+  display: inline-block;
+  align-self: end;
+}
+
+.login-button {
+  text-align: center;
+  margin-top: 5%;
+  position: relative;
+}
+
+.login-button:active {
+  background-color: darkgrey;
+}
+
+.buttonFlex {
+  display: flex;
+  justify-content: end;
+}

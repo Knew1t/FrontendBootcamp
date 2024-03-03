@@ -1,0 +1,29 @@
+.navbar {
+  border: 1px solid #000;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.navbar_img {
+  align-self: center;
+}
+
+.navbar_button {
+  margin-top: 20%;
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar_button:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+
+.navbar_button_logout {
+  margin-top: 80%;
+}
+/* .navbar-button:active {} */
